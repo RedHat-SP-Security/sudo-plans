@@ -1,0 +1,17 @@
+# used in
+# https://gitlab.com/redhat/centos-stream/sudo/-/tree/c10s
+
+summary: rpmverify test
+
+execute:
+    how: tmt
+
+discover:
+
+  - name: test
+    how: shell
+    tests:
+      - name: rpmverify
+        test: 'rpmverify $(rpm -qa | grep sudo)'
+        duration: 2m
+

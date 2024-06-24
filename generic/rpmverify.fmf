@@ -12,6 +12,6 @@ discover:
     how: shell
     tests:
       - name: rpmverify
-        test: 'rpmverify $(rpm -qa | grep sudo)'
+        test: 'dnf list installed sudo'
         duration: 2m
 

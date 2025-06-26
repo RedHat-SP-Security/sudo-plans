@@ -2,7 +2,7 @@ summary: test plan for sudo internal gating testing
 
 
 adjust:
-  - when: distro == centos-stream-10, centos-stream-9
+  - when: distro == centos-stream-10, centos-stream-9, centos-stream-8
     enabled: false
     because: we want to run this plan only for rhel distros
 
